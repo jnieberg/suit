@@ -1,0 +1,40 @@
+@import "src/scss/responsive";
+@import "src/scss/theme";
+
+header {
+	color: $color-white;
+	background-color: $color-primary;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: $padding * 6;
+}
+
+mat-toolbar {
+	justify-content: center;
+}
+
+main {
+	width: $width-m;
+	margin: $padding * 2 auto;
+	@include respond-min($l) {
+		width: $width-l;
+	}
+	@include respond-min($xl) {
+		width: $width-xl;
+	}
+	@include respond-min($xxl) {
+		width: $width-xxl;
+	}
+}
+
+footer {
+	color: $color-white;
+	background-color: $color-primary;
+	position: absolute;
+	z-index: 1;
+	bottom: 0;
+	width: 100%;
+	height: $padding * 4;
+}

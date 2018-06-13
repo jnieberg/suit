@@ -1,0 +1,11 @@
+@import "src/scss/theme.scss";
+
+nav {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	padding: $padding $padding * .5;
+	button {
+		margin: 0 $padding * .5;
+	}
+}

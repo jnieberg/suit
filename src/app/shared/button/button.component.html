@@ -1,0 +1,29 @@
+<button *ngIf="element === 'button'"
+ routerLink="{{href}}"
+ type="{{type}}"
+ class="mat-button{{classes}}"
+ title="{{alt}}"
+ disabled="{{disabled}}">
+	<i *ngIf="fa"
+	 class="fas fa-{{fa}}"></i>
+	{{value}}
+</button>
+<a *ngIf="element === 'link'"
+ routerLink="{{href}}"
+ class="mat-button{{classes}}"
+ title="{{alt}}">
+	<i *ngIf="fa"
+	 class="fas fa-{{fa}}">
+	</i>
+	{{value}}
+</a>
+<input *ngIf="element === 'input'"
+ routerLink="{{href}}"
+ type="{{type}}"
+ class="mat-button{{classes}}"
+ value="{{value}}"
+ alt="{{alt || ''}}"
+ title="{{alt}}"
+ disabled="{{disabled}}">
+
+<ng-content></ng-content>

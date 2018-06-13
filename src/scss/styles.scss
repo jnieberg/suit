@@ -1,0 +1,42 @@
+//@import "~@angular/material/prebuilt-themes/pink-bluegrey.css";
+@import "theme.scss";
+
+body {
+	font-family: Roboto,"Helvetica Neue",sans-serif;
+	color: $color-darker;
+}
+
+.flex-spacer {
+	flex-grow: 1;
+}
+
+.quarter-width {
+	width: 25%;
+}
+.half-width {
+	width: 50%;
+}
+.three-quarter-width {
+	width: 75%;
+}
+.full-width {
+	width: 100%;
+}
+.new-line {
+	clear: both;
+	display: block;
+}
+
+.mat-snackbar-warn {
+	background-color: $color-warn;
+	.mat-simple-snackbar-action button {
+		color: rgba(255, 255, 255, .75);
+	}
+}
+
+.mat-snackbar-success {
+	background-color: mat-color($suit-theme-primary, 400);
+	.mat-simple-snackbar-action button {
+		color: rgba(255, 255, 255, .75);
+	}
+}

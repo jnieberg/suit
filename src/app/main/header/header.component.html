@@ -1,0 +1,43 @@
+<nav>
+	<button mat-mini-fab
+	 matTooltip="Go to home"
+	 [routerLink]="['/']">
+		<mat-icon>home</mat-icon>
+	</button>
+	<button [currentUser]
+	 mat-mini-fab
+	 color="primary"
+	 matTooltip="Open menu">
+		<mat-icon>menu</mat-icon>
+	</button>
+	<div class="flex-spacer"></div>
+	<div [currentUser]>
+		<button mat-mini-fab
+		 [matMenuTriggerFor]="user"
+		 matTooltip="My account">
+			<mat-icon>account_box</mat-icon>
+		</button>
+		<mat-menu #user="matMenu"
+		 yPosition="above">
+			<ng-template matMenuContent>
+				<button mat-menu-item
+				 [routerLink]="['/profile']">
+					<mat-icon>settings</mat-icon>
+					<span>Profile settings</span>
+				</button>
+				<button mat-menu-item
+				 (click)="logout()">
+					<mat-icon>exit_to_app</mat-icon>
+					<span>Logout</span>
+				</button>
+			</ng-template>
+		</mat-menu>
+	</div>
+	<button [currentUser]=false
+	 mat-mini-fab
+	 color="primary"
+	 matTooltip="Login"
+	 [routerLink]="['/login']">
+		<mat-icon>exit_to_app</mat-icon>
+	</button>
+</nav>

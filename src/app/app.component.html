@@ -1,0 +1,16 @@
+<header class="mat-elevation-z6">
+	<suit-header></suit-header>
+</header>
+<mat-toolbar color="accent">
+	<span>Welcome to SUIT</span>
+	<span [currentUser]
+	 (userE)="user = $event">, {{user?.firstName}} {{user?.lastName}}</span>
+</mat-toolbar>
+<main>
+	<section>
+		<router-outlet></router-outlet>
+	</section>
+</main>
+<footer class="mat-elevation-z6">
+	<suit-footer></suit-footer>
+</footer>

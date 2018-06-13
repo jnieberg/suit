@@ -1,0 +1,12 @@
+<mat-card [currentUser]>
+	<h3>All registered users:</h3>
+	<mat-list>
+		<mat-list-item *ngFor="let user of users">
+			<button mat-icon-button
+			 (click)="deleteUser(user.id)">
+				<mat-icon matListIcon>delete</mat-icon>
+			</button>
+			<p matLine>{{user.username}} ({{user.firstName}} {{user.lastName}})</p>
+		</mat-list-item>
+	</mat-list>
+</mat-card>

@@ -1,0 +1,33 @@
+@import "~@angular/material/theming";
+@include mat-core();
+
+// define 3 theme color
+// mat-palette accepts $palette-name, main, lighter and darker variants
+$suit-theme-primary: mat-palette($mat-red);
+$suit-theme-accent: mat-palette($mat-grey, 300);
+$suit-theme-warn: mat-palette($mat-red, A200);
+$suit-theme-brand: mat-palette($mat-indigo);
+
+// create theme (use mat-dark-theme for themes with dark backgrounds)
+$suit-theme: mat-light-theme(
+    $suit-theme-primary,
+    $suit-theme-accent,
+    $suit-theme-warn
+);
+
+@include angular-material-theme($suit-theme);
+$color-white: mat-color($suit-theme-accent, "900-contrast");
+$color-lighter: mat-color($suit-theme-accent, 200);
+$color-light: mat-color($suit-theme-accent, 300);
+$color-medium: mat-color($suit-theme-accent, 400);
+$color-dark: mat-color($suit-theme-accent, 500);
+$color-darker: mat-color($suit-theme-accent, 800);
+$color-black: mat-color($suit-theme-accent, "50-contrast");
+$color-primary: mat-color($suit-theme-brand);
+$color-secondary: mat-color($suit-theme-accent);
+$color-warn: mat-color($suit-theme-warn);
+$padding: 10px;
+$width-m: auto;
+$width-l: 872px;
+$width-xl: 984px;
+$width-xxl: 1160px;
