@@ -1,10 +1,11 @@
 <mat-card>
 	<h2>Register</h2>
-	<form name="form"
+	<form name="register"
 	 (ngSubmit)="f.form.valid && register()"
 	 #f="ngForm"
-	 netlify
-	 novalidate>
+	 attr.netlify
+	 novalidate
+	 method="post">
 		<p>
 			<mat-form-field class="half-width">
 				<mat-label>First name</mat-label>
@@ -52,7 +53,8 @@
 			</mat-form-field>
 		</p>
 		<div class="form-group">
-			<button mat-raised-button
+			<button type="submit"
+			 mat-raised-button
 			 color="primary"
 			 [disabled]="loading">Register</button>
 			<button mat-button

@@ -1,9 +1,10 @@
 <mat-card>
 	<h2>Login</h2>
-	<form name="form"
+	<form name="login"
 	 (ngSubmit)="f.form.valid && login()"
 	 #f="ngForm"
-	 novalidate>
+	 novalidate
+	 method="post">
 		<p>
 			<mat-form-field class="full-width">
 				<input matInput
@@ -31,7 +32,8 @@
 			</mat-form-field>
 		</p>
 		<div class="form-group">
-			<button mat-raised-button
+			<button type="submit"
+			 mat-raised-button
 			 color="primary"
 			 [disabled]="loading">Login</button>
 			<button mat-button
